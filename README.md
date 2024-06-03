@@ -7,8 +7,8 @@ Go from a youtube live and automatically get the m3u8. Here are the possibilitie
 `youtube.com/channel/UCbzsECFSruRVbkhkMJB3MGQ`  
 **Example URL:** `http://localhost/youtube-live/channel-id?id=UCbzsECFSruRVbkhkMJB3MGQ`
 
-<hr>
 </details>
+<hr>
 
 <details>
 <summary><strong>Custom Name</strong></summary>
@@ -16,8 +16,8 @@ Go from a youtube live and automatically get the m3u8. Here are the possibilitie
 `youtube.com/c/YouTubeCreators`  
 **Example URL:** `http://localhost/youtube-live/custom-name?id=YoutubeCreators`
 
-<hr>
 </details>
+<hr>
 
 <details>
 <summary><strong>Handle Name</strong></summary>
@@ -25,8 +25,8 @@ Go from a youtube live and automatically get the m3u8. Here are the possibilitie
 `youtube.com/@youtubecreators`  
 **Example URL:** `http://localhost/youtube-live/handle-name?id=@youtubecreators`
 
-<hr>
 </details>
+<hr>
 
 <details>
 <summary><strong>Legacy Username URL</strong></summary>
@@ -34,8 +34,8 @@ Go from a youtube live and automatically get the m3u8. Here are the possibilitie
 `youtube.com/user/YouTube`  
 **Example URL:** `http://localhost/youtube-live/user-name?id=YouTube`
 
-<hr>
 </details>
+<hr>
 
 <details>
 <summary><strong>Live video</strong></summary>
@@ -43,5 +43,5 @@ Go from a youtube live and automatically get the m3u8. Here are the possibilitie
 `youtube.com/live/jfKfPfyJRdk` or `youtube.com/watch?v=jfKfPfyJRdk`  
 **Example URL:** `http://localhost/youtube-live/video-id?id=jfKfPfyJRdk`
 
-<hr>
 </details>
+<hr>
