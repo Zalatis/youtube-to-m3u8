@@ -2,39 +2,32 @@
 Go from a youtube live and automatically get the m3u8
 Here are the possibilities to get a m3u8 file
 
-<details>
-<summary><strong>Channel URL (ID-based)</strong></summary>
+<summary><strong>Channel ID</strong></summary>
 `youtube.com/channel/UCbzsECFSruRVbkhkMJB3MGQ`
-</details>
-
-<br>
+<summary><strong>Example URL</strong></summary>
+`http://localhost/youtube-live/channel-id?id=UCbzsECFSruRVbkhkMJB3MGQ`
 <hr>
 
-<details>
-<summary><strong>Custom URL</strong></summary>
+<summary><strong>Custom Name</strong></summary>
 `youtube.com/c/YouTubeCreators`
-</details>
-
-<br>
+<summary><strong>Example URL</strong></summary>
+`http://localhost/youtube-live/custom-name?id=YoutubeCreators`
 <hr>
 
-<details>
+<summary><strong>Handle Name</strong></summary>
+`youtube.com/@youtubecreators`
+<summary><strong>Example URL</strong></summary>
+`http://localhost/youtube-live/handle-name?id=@youtubecreators`
+<hr>
+
 <summary><strong>Legacy Username URL</strong></summary>
 `youtube.com/user/YouTube`
-</details>
+<summary><strong>Example URL</strong></summary>
+`http://localhost/youtube-live/user-name?id=YouTube`
 
-<br>
 <hr>
 
-<details>
-<summary><strong>YouTube Live video URL</strong></summary>
-`youtube.com/live/jfKfPfyJRdk`
-</details>
-
-<br>
-<hr>
-
-<details>
-<summary><strong>YouTube Handle URL</strong></summary>
-`youtube.com/@youtubecreators`
-</details>
+<summary><strong>Live video</strong></summary>
+`youtube.com/live/jfKfPfyJRdk` or `youtube.com/watch?v=jfKfPfyJRdk`
+<summary><strong>Example URL</strong></summary>
+`http://localhost/youtube-live/video-id?id=jfKfPfyJRdk`
