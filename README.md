@@ -4,7 +4,6 @@ Go from a youtube live and automatically get the m3u8. Here are the possibilitie
 <details>
 <summary><strong>Channel ID</strong></summary>
 
-
 **Source URL :** `youtube.com/channel/UCbzsECFSruRVbkhkMJB3MGQ`  
 **Example URL:** `http://localhost/youtube-live/channel-id?id=UCbzsECFSruRVbkhkMJB3MGQ`
 
