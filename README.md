@@ -4,11 +4,7 @@ Here are the possibilities to get a m3u8 file
 
 <details>
 <summary><strong>Channel URL (ID-based)</strong></summary>
-
-<br>
-
 `youtube.com/channel/UCbzsECFSruRVbkhkMJB3MGQ`
-
 </details>
 
 <br>
@@ -16,9 +12,6 @@ Here are the possibilities to get a m3u8 file
 
 <details>
 <summary><strong>Custom URL</strong></summary>
-
-<br>
-
 `youtube.com/c/YouTubeCreators`
 </details>
 
@@ -27,9 +20,6 @@ Here are the possibilities to get a m3u8 file
 
 <details>
 <summary><strong>Legacy Username URL</strong></summary>
-
-<br>
-
 `youtube.com/user/YouTube`
 </details>
 
@@ -38,9 +28,6 @@ Here are the possibilities to get a m3u8 file
 
 <details>
 <summary><strong>YouTube Live video URL</strong></summary>
-
-<br>
-
 `youtube.com/live/jfKfPfyJRdk`
 </details>
 
@@ -49,8 +36,5 @@ Here are the possibilities to get a m3u8 file
 
 <details>
 <summary><strong>YouTube Handle URL</strong></summary>
-
-<br>
-
 `youtube.com/@youtubecreators`
 </details>
