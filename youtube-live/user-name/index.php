@@ -10,32 +10,55 @@ if (empty($id)) {
 }
 
 $url = "https://www.youtube.com/user/$id/live";
-$ch = curl_init($url);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_HEADER, 0);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
-if ($use_proxy) {
-    // Set up SOCKS5 proxy with authentication using variables from the config file
-    curl_setopt($ch, CURLOPT_PROXY, $proxy);
-    curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxy_userpwd);
+function fetch_url($url, $use_proxy, $proxy = '', $proxy_userpwd = '') {
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+    if ($use_proxy) {
+        curl_setopt($ch, CURLOPT_PROXY, $proxy);
+        curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxy_userpwd);
+    }
+
+    $response = curl_exec($ch);
+
+    if (curl_errno($ch)) {
+        curl_close($ch);
+        return false;
+    }
+
+    curl_close($ch);
+    return $response;
 }
 
-$response = curl_exec($ch);
+$response = false;
 
-if (curl_errno($ch)) {
-    echo "cURL error: " . curl_error($ch);
-    curl_close($ch);
+// Determine if we should use the proxy or not
+if (isset($use_proxy) && $use_proxy) {
+    // Try with proxy first if $use_proxy is true
+    $response = fetch_url($url, true, $proxy, $proxy_userpwd);
+
+    // If proxy request fails and fallback is true, try without proxy
+    if ($response === false && isset($fallback) && $fallback) {
+        $response = fetch_url($url, false);
+    }
+} else {
+    // If $use_proxy is false, try without proxy
+    $response = fetch_url($url, false);
+}
+
+if ($response === false) {
+    echo "Error: Unable to fetch the URL.";
     exit;
 }
-
-curl_close($ch);
 
 $html = $response;
 
 preg_match_all('/"hlsManifestUrl":"([^"]+\.m3u8)"/', $html, $matches);
 
-$stream_url = $matches[1][0];
+$stream_url = isset($matches[1][0]) ? $matches[1][0] : '';
 
 if (!empty($stream_url)) {
     header("Location: $stream_url", true, 302);
